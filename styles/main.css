@@ -3,6 +3,9 @@
 | GLOBAL
 |=================== 
 */
+body {
+
+}
 
 /* 
 |-------------------
@@ -15,6 +18,9 @@
 | Typography
 |-------------------
 */
+
+/* font-family: 'Montserrat', sans-serif; (200, 400, 700)
+font-family: 'Satisfy', cursive; */
 
 /* 
 |===================
