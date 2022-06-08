@@ -23,7 +23,23 @@
                     </div>
                     <div class="bday-input is-flex is-column item-center">
                         <label for="bday">Enter your birthday&period;</label>
-                        <input type="month" name="bday" id="bday">
+                        <div class="bday-input">
+                            <select name="bday" id="bday-month">
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                            <input type="number" name="bday" id="bday-day" min="1" max="31">
+                        </div>
                     </div>
                 </div>
                 <h2>Choose a card below to receive your reading&period;</h2>
