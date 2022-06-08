@@ -4,7 +4,10 @@
 |=================== 
 */
 body {
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    background-color: #f2d5ff;
 }
 
 /* 
@@ -12,18 +15,58 @@ body {
 | Grid Helpers
 |-------------------
 */
+.is-flex {
+    display: flex;
+}
+
+.is-column {
+    flex-direction: column;
+}
+
+.item-center {
+    align-items: center;
+}
 
 /* 
 |-------------------
 | Typography
 |-------------------
 */
+h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 66px;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
 
 /* font-family: 'Montserrat', sans-serif; (200, 400, 700)
 font-family: 'Satisfy', cursive; */
 
 /* 
 |===================
+| USER INPUT
+|=================== 
+*/
+input {
+    margin-bottom: 20px
+}
+
+
+/* 
+|===================
 | CARD
 |=================== 
 */
+.card-container {
+    width: 100%;
+    height: 70vh;
+    justify-content: space-around;
+}
+
+.card-container img {
+    cursor: pointer;
+}
