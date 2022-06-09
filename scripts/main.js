@@ -8,11 +8,16 @@ var resultGiven = false;
 const sign = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
 
 // == Tarot Card Array & Path ==
-const tarotArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"];
+// Demo Array
+const tarotArray = ["17", "18", "19"];
+
+// Full Array:
+// const tarotArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"];
 
 const imgPath = "images/";
 
 // == Tarot Card Readings ==
+
 
 // == Card Back ==
 const card1 = document.getElementById('card-1');
@@ -26,6 +31,7 @@ const day = document.getElementById('bday-day');
 // == OUTPUT ==
 const userName = document.getElementById('user-name');
 const userSign = document.getElementById('user-sign');
+const tarotName = document.getElementById('card-name');
 const reading = document.getElementById('tarot-reading');
 
 
@@ -33,17 +39,26 @@ const reading = document.getElementById('tarot-reading');
 // Card Clicked
 card1.addEventListener("click", function(){
 
-    if(resultGiven) return;
+    // test
+    // if(resultGiven) return;
     var cardData = [
         {
-            "desc": "This is my description",
-            "cardNumber": 1
+            "cardNumber": 17,
+            "cardName":  "The Star",
+            "cardDesc": "Today will be filled with energies of inspiration, motivation and renewal. A very good day to start new creative projects or hobbies."
         },
         {
-            "desc": "This is my 2nd description",
-            "cardNumber": 2
+            "cardNumber": 18,
+            "cardName": "The Moon",
+            "cardDesc": "Everything today is not exactly as they seem. Be aware of possible misconceptions about the people you meet or your personal beliefs by trusting what your intuition is saying."
+        },
+        {
+            "cardNumber": 19,
+            "cardName": "The Sun",
+            "cardDesc": "Positivity, success, and good luck are in abundance today. Enjoy what the universe has to offer you like the warm rays of sunlight on a clear day."
         }
     ];
+
     /*
     |==================
     | CARD RANDOMIZER
@@ -51,7 +66,7 @@ card1.addEventListener("click", function(){
     
     const randomTarot = Math.floor(Math.random() * Math.floor(cardData.length));
     card1.src = imgPath + cardData[randomTarot].cardNumber + ".svg";
-    console.log(cardData[randomTarot].desc);
+    // console.log(cardData[randomTarot].cardDesc);
 
     /*
     |==================
@@ -126,7 +141,9 @@ card1.addEventListener("click", function(){
         userSign.innerHTML = sign[11];
     }
     
-    reading.innerHTML = randomTarot;
+
+    tarotName.innerHTML = cardData[randomTarot].cardName;
+    reading.innerHTML = cardData[randomTarot].cardDesc;
 
     resultGiven = true;
 });
