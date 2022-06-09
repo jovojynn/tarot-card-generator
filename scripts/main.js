@@ -1,31 +1,47 @@
-// zodiac array
+/*
+|===================
+| VARIABLES & ARRAYS
+|===================*/
+// == Zodiac Array ==
 const sign = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
 
-// tarot card image array
+// == Tarot Card Array & Path ==
 const tarotArray = ["6", "3", "2"];
 const imgPath = "images/";
 
-// card back
+// == Card Back ==
 const card1 = document.getElementById('card-1');
 const card2 = document.getElementById('card-2');
 
+// == USER INPUT ==
 const enterName = document.getElementById('name');
+const selectMonth = document.getElementById('bday-month');
+const day = document.getElementById('bday-day');
+
+// == OUTPUT ==
 const userName = document.getElementById('user-name');
 const userSign = document.getElementById('user-sign');
 const reading = document.getElementById('tarot-reading');
 
-const selectMonth = document.getElementById('bday-month');
-const day = document.getElementById('bday-day');
-
-// click function or card selection
+// Card Clicked
 card1.addEventListener("click", function(){
+    /*
+    |==================
+    | CARD RANDOMIZER
+    |================== */
     const randomTarot = Math.floor(Math.random() * Math.floor(tarotArray.length));
     card1.src = imgPath + tarotArray[randomTarot] + ".svg";
 
-    // User Name Data
+    /*
+    |==================
+    | USER'S NAME
+    |================== */
     userName.innerHTML = enterName.value;
 
-    // User Birthday Data
+    /*
+    |==================
+    | ZODIAC SIGNS
+    |================== */
 
     // == ARIES ==
     if(selectMonth.value === "March" && day.value >= 21) {
@@ -89,11 +105,5 @@ card1.addEventListener("click", function(){
         userSign.innerHTML = sign[11];
     }
     
-    
+
 });
-
-// var value = select.options[select.selectedIndex].value;
-// console.log(value);
-
-// var randomCard = Math.floor(Math.random() * Math.floor(cardArray.length));
-//     	suite.src = imgPath + cardArray[randomCard] + ".svg";
