@@ -6,8 +6,14 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
+    font-size: 18px;
     text-align: center;
-    background-color: #f2d5ff;
+    color: #fff;
+}
+
+.wrapper {
+    background: rgb(142, 82, 168);
+    background: linear-gradient(0deg, rgba(142, 82, 168, 1) 24%, rgba(126, 48, 124, 1) 53%, rgba(103, 34, 80, 1) 79%, rgba(59, 60, 62, 1) 100%);
 }
 
 /* 
@@ -35,11 +41,21 @@ body {
 h1 {
     font-family: 'Satisfy', cursive;
     font-size: 66px;
+    margin: 0;
+    padding: 60px;
+    background: #F2E30A;
+    background: linear-gradient(to bottom left, #F2E30A 22%, #D69949 43%, #F2E30A 52%, #F2D12C 70%, #D69949 89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;background: #F2E30A;
+    background: linear-gradient(to bottom left, #F2E30A 22%, #D69949 43%, #F2E30A 52%, #F2D12C 70%, #D69949 89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
     font-weight: 700;
-    margin-bottom: 25px;
+    margin: 40px 0;
+    font-size: 28px;
 }
 
 
@@ -55,6 +71,42 @@ input {
     margin-bottom: 20px
 }
 
+.name-input,
+.bday-input {
+/* .month, */
+/* .day { */
+    line-height: 1.6;
+}
+
+.name-input label,
+.bday-input label {
+    display: inline-block;
+    width: 300px;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+#name {
+    width: 300px;
+}
+
+#name,
+.month,
+.day {
+    padding: 10px;
+    box-shadow: inset 2px 2px 6px 1px rgb(0 0 0 / 20%);
+
+}
+
+.month {
+    margin-right: 15px;
+    width: 200px;
+}
+
+.day {
+    padding-left: 13px;
+    width: 80px;
+}
 
 /* 
 |===================
@@ -62,12 +114,35 @@ input {
 |=================== 
 */
 .card-container {
-    width: 100%;
+    width: 1000px;
     height: 60vh;
     justify-content: space-around;
-    margin-bottom: 40px;
+    margin: 0 auto;
 }
 
 .card-container img {
     cursor: pointer;
 }
+
+ #card-name {
+    text-transform: uppercase;
+    font-size: 33px;
+ }
+
+ .reveal {
+    line-height: 1.5;
+ }
+
+ .reveal h3 {
+    font-size: 25px;
+ }
+
+ .reveal h4 {
+    font-size: 23px;
+    margin-bottom: 4px;
+ }
+
+ .reveal p {
+    font-size: 20px;
+    padding: 10px 144px;
+ }
